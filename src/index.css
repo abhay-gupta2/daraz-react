@@ -1,0 +1,349 @@
+
+header
+{
+    background-color: rgb(248, 86, 6);
+    position: sticky;
+    top: 0;
+    z-index: 5;
+}
+ul
+{
+    list-style: none;
+}
+.txt-orange
+{
+    color: orange;
+}
+a
+{
+    text-decoration: none;
+}
+.t-white a
+{
+    color: white;
+}
+.t-14
+{
+    font-size: 14px;
+}
+.btn-bg
+{
+    background-color: #FFE1D2;
+    position:relative;
+    left: -4px;
+    border-radius: 0 2px 2px 0;
+}
+.srch
+{
+    width: 93%;
+    border: none;
+    border-radius: 2px 0 0 2px;
+    padding: 10px;
+}
+input:focus
+{
+    outline: none;
+    font-size: 14px;
+}
+.lgn 
+{
+    width: 400px;
+    margin: auto;
+    color: orange;
+    border: 1px solid orange;
+    padding: 20px;
+    border-radius: 5px;
+    position: fixed;
+    top: 40%;
+    left: 35%;
+    background-color: white;
+    visibility: hidden;
+}
+.lgn input
+{
+    width: 300px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: silver;
+}
+.lgn input:focus
+{
+    outline: none;
+    border: 1px solid lightblue;
+    font: 14px;
+}
+.lgn .btn1
+{
+    border: none;
+    background-color: limegreen;
+    color: orange;
+    padding: 10px;
+    border-radius: 5px; 
+}
+.lgn .btn2
+{
+    border: none;
+    background-color: lightblue;
+    color: blue;
+    padding: 10px;
+    border-radius: 5px;
+}
+@keyframes moveUp {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.show {
+    animation: moveUp 0.5s ease-in-out;
+    visibility: visible; /* Ensure the element is visible */
+}
+
+.slider
+{
+    height: 364px;
+    width: 888px;
+    position: relative;
+    top: -8px;
+}
+.carousel-item img
+{
+    height: 334px;
+}
+.carousel-indicators
+{
+    bottom: 20px;
+}
+
+/* download module */
+/* Container Styles */
+.download-card {
+    background: linear-gradient(90deg, #fff, hsla(0, 0%, 100%, 0)), 
+                linear-gradient(179.27deg, #ffedd6 0.83%, #ffc3e3 46.78%, #fff 99.57%), 
+                linear-gradient(0deg, #fff, #fff);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 240px;
+    height: 334px;
+    padding: 6px;
+    position: relative;
+    top: -8px;
+}
+
+/* Header Styles */
+.download-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-align: center;
+}
+
+.download-icon {
+    width: 24px;
+}
+
+.download-title {
+    font-size: 14px;
+    color: #6C1D00;
+    margin: 0;
+}
+
+/* Promotion Block */
+.download-block {
+    background-image: url('https://img.lazcdn.com/g/tps/imgextra/i2/O1CN01tceZus1IewufOY1tZ_!!6000000000919-2-tps-364-316.png');
+    background-size: cover;
+    height: 158px;
+    margin-top: 6px;
+    padding: 8px;
+    color: white;
+}
+
+.download-star {
+    font-size: 10px;
+    color: #FFD700;
+}
+
+.download-rating {
+    font-size: 10px;
+    text-transform: capitalize;
+}
+
+.download-text {
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.download-feature {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 12px;
+    padding-left: 36px;
+}
+
+.download-feature-icon {
+    width: 36px;
+    height: 36px;
+}
+
+.download-feature-text {
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* App Links */
+.download-links {
+    display: flex;
+    gap: 8px;
+    padding-left: 8px;
+    margin-top: 8px;
+}
+
+.download-app-image {
+    width: 90px;
+}
+
+.download-store-links {
+    padding: 12px;
+}
+
+.download-store-icon {
+    width: 83px;
+    height: 24px;
+}
+
+.mt-2 {
+    margin-top: 8px;
+}
+
+/* Footer */
+.download-footer {
+    font-size: 10px;
+    color: #003366;
+    display: block;
+    text-align: center;
+    margin-top: 4px;
+}
+
+/* download module */
+
+
+.fs
+{
+    padding: 4px;
+}
+.fs:hover
+{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.fs img
+{
+    width: 175px;
+    height: 175px;
+    padding: 2px;
+}
+.fs h6
+{
+    height: 20px;
+    overflow: hidden;
+}
+.description
+{
+    height: 40px;
+    overflow: hidden;
+}
+/* category */
+.ctgry
+{
+    display: flex;
+    align-items: center;
+}
+.ctgry div:hover
+{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.ctgry img
+{
+    height: 80px;
+    width: 80px;
+    align-items: center;
+    margin-top: 20px;
+    margin-left: 27px;
+}
+.ctgry p
+{
+ font-size: 14px;
+ color: #000;
+ text-align: center;
+}
+.ctgry div
+{
+    height: 148px;
+    width: 140px;
+    border: 1px solid #ccc;
+}
+/* category */
+
+/* just for you */
+.jfy
+{
+    background: #fff;
+    height: 100%;
+    margin-bottom: 20px;
+    margin-right: 5px;
+    min-height: 189px;
+    width: 185px;
+    padding: 0;
+}
+.jfy:hover
+{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.jfy img
+{
+    width: 183px;
+    
+    height: 188px;
+}
+.jfy p
+{
+    color: #000;
+    height: 44px;
+    overflow: hidden;
+    margin: 5px;
+}
+.jfy div
+{
+    display: flex;
+    gap: 10px;
+}
+.jfy div :first-child
+{
+    color: orange;
+    font: 18px;
+}
+.jfy div :last-child
+{
+    color: #ccc;
+    font-size: 12px;
+}
+/* just for you */
+
+
+.price .text-dark
+{
+    height: 50px;
+    overflow: hidden;
+}
+.price img
+{
+    width: 100%;
+}
