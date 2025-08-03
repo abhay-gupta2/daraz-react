@@ -264,7 +264,9 @@ input:focus
 .ctgry
 {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
 }
 .ctgry div:hover
 {
@@ -289,6 +291,7 @@ input:focus
     height: 148px;
     width: 140px;
     border: 1px solid #ccc;
+    margin: 0 auto;
 }
 /* category */
 

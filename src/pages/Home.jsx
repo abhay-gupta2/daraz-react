@@ -2,20 +2,20 @@ import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
 
 function Home() {
-  let [cat, setCat] = useState([])
-  let [product, setProduct] = useState([])
-  useEffect(() => {
-    fetch('https://dummyjson.com/products/categories')
-      .then(res => res.json())
-      .then(a => setCat(a));
+    let [cat, setCat] = useState([])
+    let [product, setProduct] = useState([])
+    useEffect(() => {
+        fetch('https://dummyjson.com/products/categories')
+            .then(res => res.json())
+            .then(a => setCat(a));
 
-    fetch('https://dummyjson.com/products')
-      .then(res => res.json())
-      .then(a => setProduct(a.products));
-  }, [])
+        fetch('https://dummyjson.com/products')
+            .then(res => res.json())
+            .then(a => setProduct(a.products));
+    }, [])
     return (
         <>
-            <section className="container">
+            <section className="container mx-auto">
                 {/* Carousel Section */}
                 <div className="d-flex gap-2">
                     <div id="carouselExampleIndicators" className="carousel slide slider">
@@ -53,7 +53,7 @@ function Home() {
                         </button>
                     </div>
                     {/* Download Card Section */}
-                    <div className="download-card">
+                    <div className="download-card d-lg-block d-md-block d-none">
                         <div className="download-header">
                             <img className="download-icon" src="https://img.lazcdn.com/us/domino/1ee015d6a5c62fd0339c88c657c1c183.jpg_120x120q80.jpg" alt />
                             <p className="download-title">Download the App</p>
@@ -82,9 +82,7 @@ function Home() {
                     </div>
                 </div>
             </section>
-            <section className="container">
-                <div className="bg-image" style={{ backgroundImage: 'url("https://img.lazcdn.com/us/domino/a7381fc8-f8e1-482c-9ea5-00785b64bf01_NP-1920-500.gif_2200x2200q80.gif")', height: 200, width: 1100, backgroundSize: 'auto', backgroundPosition: 'top' }}>
-                </div>
+            <section className="container mx-auto">
                 <div className="fs-4 my-2">
                     <p>Flash Sale</p>
                 </div>
@@ -94,35 +92,28 @@ function Home() {
                         <a href="#" className="txt-orange">Shop all products</a>
                     </div>
                 </div>
-                <div className="row my-3 t-14">
-                    {product.slice(0,6).map((a)=>(
-                        <div className="col-lg-2 p-1">
+                <div className="d-flex flex-wrap gap-4 my-3 t-14">
+                    {product.slice(0, 6).map((a) => (
+                        <div className="mx-auto">
                             <Link to={`/details/${a.id}`}>
-                        <div className="fs">
-                            <img src={a.thumbnail} />
-                            <h6>{a.title}</h6>
-                            <p className="txt-orange">$ {a.price}</p>
-                            <div className='d-flex justify-content-between px-4'>
-                            <p className='text-secondary'>{a.rating} <i class="bi bi-star-fill txt-orange"></i></p>
-                            <p>{a.discountPercentage}%</p>
-                            </div>
+                                <div className="fs">
+                                    <img src={a.thumbnail} />
+                                    <h6>{a.title}</h6>
+                                    <p className="txt-orange">$ {a.price}</p>
+                                    <div className='d-flex justify-content-between px-4'>
+                                        <p className='text-secondary'>{a.rating} <i class="bi bi-star-fill txt-orange"></i></p>
+                                        <p>{a.discountPercentage}%</p>
+                                    </div>
+                                </div>
+                            </Link>
                         </div>
-                        </Link>
-                    </div>
                     ))}
                 </div>
                 <div className=" mt-3 " style={{ fontSize: 22 }}>Category
-                    <div className="row  mt-4">
-                        <div className="col-lg-12 ctgry">
-                        {cat.slice(0,8).map((a)=>(<Link to={`/category/${a.slug}`}>
-                                <div className='pt-5'>
-                                    <p>{a.name}</p>
-                                </div>
-                            </Link>))}
-                        </div>
-                        <div className="col-lg-12 ctgry">
-                        {cat.slice(8,16).map((a)=>(<Link to={`/category/${a.slug}`}>
-                                <div className='pt-5'>
+                    <div className="mt-4">
+                        <div className="ctgry">
+                            {cat.map((a) => (<Link to={`/category/${a.slug}`}>
+                                <div className='pt-5 mx-auto'>
                                     <p>{a.name}</p>
                                 </div>
                             </Link>))}
@@ -133,20 +124,18 @@ function Home() {
                 <div>
                     <p>Just For You</p>
                 </div>
-                <div className="row">
-                    {product.slice(6,18).map((a)=>(
-                        <div className="col-lg-2 jfy">
-                        <Link to={`/details/${a.id}`}>
-                        <img src={a.thumbnail} />
-                            <h6 style={{height:20, overflow:'hidden',textAlign:'center'}}>{a.title}</h6>
-                            <div className='px-4'>
-                                <p>$ {a.price}</p>
-                                <p>{a.discountPercentage}%</p>
-                            </div>
-                        </Link>
-                    </div>
+                <div className="d-flex  gap-3 flex-wrap">
+                    {product.slice(6, 18).map((a) => (
+                            <Link to={`/details/${a.id}`} className='jfy mx-auto'>
+                                <img src={a.thumbnail} />
+                                <h6 style={{ height: 20, overflow: 'hidden', textAlign: 'center' }}>{a.title}</h6>
+                                <div className='px-4'>
+                                    <p>$ {a.price}</p>
+                                    <p>{a.discountPercentage}%</p>
+                                </div>
+                            </Link>
                     ))}
-                    
+
                 </div>
                 {/* just for you */}
             </section>
