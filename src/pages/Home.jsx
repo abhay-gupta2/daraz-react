@@ -89,11 +89,11 @@ function Home() {
                 <div className="d-flex justify-content-between txt-orange border-bottom p-4 bg-white">
                     <div className="pt-2">On Sale Now</div>
                     <div className="text-uppercase fs-5 border border-warning p-2 hover-bg-warning hover-text-white">
-                        <a href="#" className="txt-orange">Shop all products</a>
+                        <Link to={'/products'} className="txt-orange">Shop all products</Link>
                     </div>
                 </div>
                 <div className="d-flex flex-wrap gap-4 my-3 t-14">
-                    {product.slice(0, 6).map((a) => (
+                    {product.slice(0, 5).map((a) => (
                         <div className="mx-auto">
                             <Link to={`/details/${a.id}`}>
                                 <div className="fs">
@@ -124,8 +124,8 @@ function Home() {
                 <div>
                     <p>Just For You</p>
                 </div>
-                <div className="d-flex  gap-3 flex-wrap">
-                    {product.slice(6, 18).map((a) => (
+                <div className="d-flex gap-3 flex-wrap">
+                    {product.slice(6, 21).map((a) => (
                             <Link to={`/details/${a.id}`} className='jfy mx-auto'>
                                 <img src={a.thumbnail} />
                                 <h6 style={{ height: 20, overflow: 'hidden', textAlign: 'center' }}>{a.title}</h6>

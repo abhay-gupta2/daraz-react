@@ -9,7 +9,7 @@ function Footer() {
                         <div className="col-lg-6">
                             {/* Customer Care */}
                             <div className="row">
-                                <div className="col-lg-6">
+                                <div className="col-lg-6 col-md-4">
                                     <div className="col-12 col-md-4 mb-4 mb-md-0">
                                         <h3 className="h5 fw-bold text-dark mb-3">Customer Care</h3>
                                         <ul className="list-unstyled small">
@@ -21,7 +21,7 @@ function Footer() {
                                         </ul>
                                     </div>
                                 </div>
-                                <div className="col-lg-6">{/* Daraz */}
+                                <div className="col-lg-6 col-md-4">{/* Daraz */}
                                     <div className="col-12 col-md-4 mb-4 mb-md-0">
                                         <h3 className="h5 fw-bold text-dark mb-3">Daraz</h3>
                                         <ul className="list-unstyled small">
@@ -51,9 +51,9 @@ function Footer() {
                             </div>
                         </div>
                         {/* App Links */}
-                        <div className="col-lg-6">
+                        <div className="col-lg-6 col-md-4">
                             <div className="row">
-                                <div className="col-lg-6">
+                                <div className="col-lg-6 col-md-4">
                                     <div className="d-flex gap-2">
                                         <div className="text-center text-md-start mb-3 d-flex">
                                             <img className="me-2" src="https://img.lazcdn.com/us/domino/da7668ef-2724-447a-951a-558dafdfb265_NP-60-60.png" alt="App Icon" style={{ height: 42, width: 42 }} />
@@ -64,7 +64,7 @@ function Footer() {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="col-lg-6">
+                                <div className="col-lg-6 col-md-4">
                                     <div className="d-flex gap-3">
                                         <div>
                                             <img src="https://img.lazcdn.com/us/domino/afd80417-f3df-464e-bc1a-78d790033ae6_NP-126-42.png" alt="App Store" className="mb-2 img-fluid" style={{ maxWidth: 180 }} />
